@@ -1,0 +1,8 @@
+name: reuse workflow example
+on: workflow_call
+jobs:
+  deploy:
+    runs-on: ubuntu-slim
+    steps:
+      - name: output data
+        run: echo "Hello from reusable workflow!"
