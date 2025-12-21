@@ -77,4 +77,4 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: getting output
-        run: echo ${{ needs.deploy.output.result }}
+        run: echo ${{ needs.deploy.outputs.result }}
