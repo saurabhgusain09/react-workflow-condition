@@ -70,3 +70,5 @@ jobs:
     uses: ./.github/workflows/reuse.yaml
     with:
       artifact-name: dist-files
+    # secrets:
+    #   password: ${{ secrets.password }}
