@@ -1,0 +1,20 @@
+name: Matrix example
+on: push
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [12, 14]
+        operating-system: [ubuntu-slim, windows-latest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the code
+        uses: actions/checkout@v6
+      - name: Install NodeJS
+        uses: actions/setup-node@v5
+        with:
+          node-version: 18
+      - name: install dependencies
+        run: npm install
+      - name: build the project
+        run: npm run build
