@@ -68,3 +68,5 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/reuse.yaml
+    with:
+      artifact-name: dist-files
