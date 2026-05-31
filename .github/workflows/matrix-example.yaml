@@ -4,7 +4,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [12, 14]
+        node-version: [14, 12]
         operating-system: [ubuntu-slim, windows-latest]
         include:
           - node-version: 16
