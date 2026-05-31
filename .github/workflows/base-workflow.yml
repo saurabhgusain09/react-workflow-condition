@@ -39,13 +39,14 @@ jobs:
         id: npm-tests
         run: npm run test
       - name: Upload test report
-        if: failure()
+        if: always() 
         uses: actions/upload-artifact@v6       
         with:
           name: test-report
           path: test.json
   build:
     needs: test
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Get code
